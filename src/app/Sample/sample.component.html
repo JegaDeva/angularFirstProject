@@ -1,0 +1,8 @@
+<p
+  [ngStyle]="{ backgroundColor: getcolor() }"
+  [ngClass]="{ online: ServerStatus === 'Online' }"
+>
+  {{ 'Server' }} with {{ serverID }} is {{ getServerStatus() }}
+</p>
+{{ Servers }}
+<!-- <app-sample *ngFor="let ser of Servers"></app-sample>-->

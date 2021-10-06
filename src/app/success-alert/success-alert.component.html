@@ -1,0 +1,24 @@
+<p>Your are so successfull</p>
+<button
+  class="btn btn-primary"
+  [disabled]="!NewflagValue"
+  (click)="oncheckValue()"
+>
+  Click Here!
+</button>
+<p>{{ checkValue }}</p>
+<br />
+<br />
+<!--<Normal data binding> -->
+<input type="text" class="form-control" (input)="onUpdateValue($event)" />
+Normal Binding!
+<!-- Two Way Binding -->
+<input type="text" class="form-control" [(ngModel)]="UpdateValue" /> Two Way
+Binding
+<p>{{ UpdateValue }}</p>
+<p *ngIf="ngIfValues; else noConditionAdded">{{ ngIfValues }}</p>
+<ng-template #noConditionAdded>
+  <p>No Condition added</p>
+</ng-template>
+<!--<p>{{ NewflagValue }}</p>
+<p [innerText]="NewflagValue"></p>-->
